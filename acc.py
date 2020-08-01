@@ -15,6 +15,7 @@ class Account:
         with open(self.filepath, 'w') as file:
             file.write(str(self.balance))
 
+
 class Checking(Account):
 
     type='checking'
@@ -31,6 +32,7 @@ jacks_checking.transfer(100)
 print(jacks_checking.balance)
 jacks_checking.commit()
 print(jacks_checking.type)
+
 
 jons_checking=Checking("john.txt", 1)
 jons_checking.transfer(100)
