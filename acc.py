@@ -15,7 +15,6 @@ class Account:
         with open(self.filepath, 'w') as file:
             file.write(str(self.balance))
 
-
 class Checking(Account):
 
     type='checking'
@@ -26,6 +25,7 @@ class Checking(Account):
 
     def transfer(self, amount):
         self.balance=self.balance - amount - self.fee
+
 
 jacks_checking=Checking("jack.txt", 1)
 jacks_checking.transfer(100)
